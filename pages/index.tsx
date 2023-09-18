@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {useEffect} from "react";
 import styles from "../styles/HomeNoAuth.module.scss"
 import HeaderNoAuth from '@/src/components/homeNoAuth/headerNoAuth';
 import PresentationSection from '@/src/components/homeNoAuth/presentationSection';
@@ -8,6 +9,8 @@ import Footer from '@/src/components/common/footer';
 import courseService, { CourseType } from '@/src/services/courseService';
 import { ReactNode } from 'react';
 import { GetStaticProps } from 'next';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 interface IndexPageProps {
@@ -16,6 +19,11 @@ interface IndexPageProps {
 }
 
 const HomeNoAuth  = ({ course }: IndexPageProps) => {
+
+  useEffect(()=>{
+    AOS.init();
+  },[]);
+
   return(
     <>
       <Head>

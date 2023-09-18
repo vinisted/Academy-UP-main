@@ -1,0 +1,84 @@
+@import "./colors.module.scss";
+
+.main{
+    background: whitesmoke;
+}
+
+.formTitle{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.form{
+    width:600px;
+    padding: 50px;
+    border: 1px solid $darkGray;
+    margin: 0 auto;
+    background: #FDA002;
+}
+
+.label{
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.input{
+    border-color: $darkGray;
+    background-color: transparent;
+    color: black;
+
+    &::placeholder{
+        color: black;
+    }
+    &:focus{
+        background-color: transparent;
+        border-color: white;
+        color: black;
+        box-shadow: none;
+    }
+}
+
+.inputName{
+    @extend .input;
+    text-transform: uppercase;
+    &::placeholder{
+        text-transform: none;
+    }
+}
+
+.formBtn{
+    display: block;
+    margin: 50px auto 0 auto;
+    border-color: black;
+    color: black;
+
+    &:hover{
+        background-color: transparent;
+        color: white;
+        border-color: white;
+    }
+}
+
+@media(max-width: 767px){
+    .formTitle{
+        font-size: 30px;
+    }
+    .form{
+        width: 95%;
+    }
+}
+
+@media(max-width: 540px){
+    .form{
+        padding: 50px 10px;
+    }
+}
+
+@media(max-width: 425px){
+    .formTitle{
+        font-size: 24px;
+        text-align: center;
+    }
+}
