@@ -7,7 +7,7 @@ import Footer from "../src/components/common/footer";
 import { FormEvent, useState, useEffect } from "react";
 import authService from "../src/services/authService";
 import { useRouter } from "next/router";
-//import ToastComponent from "../src/components/common/toast";
+import ToastComponent from "../src/components/common/toast";
 
 const Register = function (){
     const router = useRouter();
@@ -15,7 +15,7 @@ const Register = function (){
     const [toastMessage,setToastMessage] = useState("");
 
     useEffect(()=>{
-        if(sessionStorage.getItem("onebitflix-token")){
+        if(sessionStorage.getItem("academyup-token")){
             router.push("/home");
         }
     },[]);
@@ -175,11 +175,11 @@ const Register = function (){
                 </Form>
             </Container>
             <Footer/>
-            {/* <ToastComponent 
+            <ToastComponent 
                 color="bg-danger" 
                 isOpen={toastIsOpen} 
                 message={toastMessage}
-            /> */}
+            />
         </main>
         </>
     );

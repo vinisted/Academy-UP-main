@@ -26,7 +26,7 @@ const courseService = {
         return res;
     },
     getFeaturedCourses: async()=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.get("/courses/featured",{
             headers:{
@@ -39,7 +39,7 @@ const courseService = {
         return res;
     },
     addToFav: async (courseId: number | string) =>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.post("/favorites",{courseId},{
             headers:{
@@ -52,7 +52,7 @@ const courseService = {
         return res;
     },
     removeFav: async (courseId: number | string) =>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.delete(`/favorites/${courseId}`,{
             headers:{
@@ -65,7 +65,7 @@ const courseService = {
         return res;
     },
     getFavCourses: async()=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.get("/favorites",{
             headers:{
@@ -78,7 +78,7 @@ const courseService = {
         return res;
     },
     like: async(courseId: number | string)=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.post("/likes",{ courseId },{
             headers:{
@@ -91,7 +91,7 @@ const courseService = {
         return res;
     },
     removeLike: async(courseId: number | string)=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.delete(`/likes/${courseId}`,{
             headers:{
@@ -104,7 +104,7 @@ const courseService = {
         return res;
     },
     getSearch: async( name: string )=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.get(`/courses/search?name=${name}`,{
             headers:{
@@ -117,7 +117,7 @@ const courseService = {
         return res;
     },
     getEpisodes: async( id : number | string )=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.get(`/courses/${id}`,{
             headers:{

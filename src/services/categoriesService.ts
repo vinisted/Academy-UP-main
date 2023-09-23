@@ -10,7 +10,7 @@ export type CategoryType = {
 
 const categoriesService = {
     getCategories: async()=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.get("/categories",{
             headers:{
@@ -23,7 +23,7 @@ const categoriesService = {
         return res;
     },
     getCourses: async(id:number)=>{
-        const token = sessionStorage.getItem("onebitflix-token");
+        const token = sessionStorage.getItem("academyup-token");
 
         const res = await api.get(`/categories/${id}`,{
             headers:{

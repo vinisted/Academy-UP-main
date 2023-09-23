@@ -5,7 +5,7 @@ import { Container, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import Footer from "../src/components/common/footer";
 import { FormEvent,useState,useEffect } from "react";
 import { useRouter } from "next/router";
-//import ToastComponent from "../src/components/common/toast";
+import ToastComponent from "../src/components/common/toast";
 import authService from "../src/services/authService";
 
 const Login = function(){
@@ -15,7 +15,7 @@ const Login = function(){
     const [toastMessage,setToastMessage] = useState("");
 
     useEffect(()=>{
-        if(sessionStorage.getItem("onebitflix-token")){
+        if(sessionStorage.getItem("academyup-token")){
             router.push("/home");
         }
     },[]);
@@ -103,11 +103,11 @@ const Login = function(){
                         ENTRAR
                     </Button>
                     </Form>
-                    {/* <ToastComponent
+                    <ToastComponent
                         color={toastColor}
                         isOpen={toastIsOpen} 
                         message={toastMessage}
-                    /> */}
+                    />
                 </Container>
                 <Footer/>
             </main>
