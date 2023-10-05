@@ -29,7 +29,7 @@ const HomeAuth = function (){
     return(
         <>
         <Head>
-            <title>Academy UP - Home</title>
+            <title>AcademyUp - Home</title>
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         </Head>
         <main>
