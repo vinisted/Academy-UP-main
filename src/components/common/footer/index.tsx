@@ -7,7 +7,7 @@ const Footer = function (){
         <>
         <Container className={styles.footer}>
             <img 
-                src="/logoUP.jpg" 
+                src="/AcademyUP.png" 
                 alt="logoFooter"
                 className={styles.footerLogo} 
             />

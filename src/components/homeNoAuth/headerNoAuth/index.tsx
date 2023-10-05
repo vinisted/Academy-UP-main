@@ -11,8 +11,8 @@ const HeaderNoAuth = function () {
             </div>
             <Container className={styles.nav}>
                 <img 
-                    src="/logoAcUp.svg" 
-                    alt="logoAcUp" 
+                    src="/academyup-logo.svg" 
+                    alt="academyup" 
                     className={styles.imgLogoNav}
                 />
                 <div>

@@ -5,7 +5,7 @@ import { FormEvent, useEffect, useState } from 'react'
 import styles from "./styles.module.scss";
 import Modal from "react-modal";
 import { useRouter } from "next/router";
-import profileService from "../../../services/profileService";
+//import profileService from "../../../services/profileService";
 
 Modal.setAppElement("#__next");
 
@@ -53,8 +53,8 @@ const HeaderAuth = function(){
             <Container className={styles.nav}>
                 <Link href="/home">
                     <img 
-                        src="/logoOnebitflix.svg" 
-                        alt="logoOnebitflix" 
+                        src="/academyup-logo.svg" 
+                        alt="logoAcademyUP" 
                         className={styles.imgLogoNav}
                     />
                 </Link>

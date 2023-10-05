@@ -29,7 +29,7 @@ const PresentationSection = function(){
                     </Col>
                     <Col md>
                         <img 
-                            src="/logoUp.jpg" 
+                            src="/AcademyUp.png" 
                             alt="imgIndex" 
                             className={styles.imgPresentation}
                         />
