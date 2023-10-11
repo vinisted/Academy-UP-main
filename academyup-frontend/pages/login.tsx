@@ -73,7 +73,7 @@ const Login = function(){
                     <p className="text-center">
                         <strong>Bem-vindo(a) ao AcademyUp!</strong>
                     </p>
-                    <FormGroup for="email" className={styles.label}>
+                    <FormGroup htmlFor="email" className={styles.label}>
                         <Label>
                             E-MAIL
                         </Label>
@@ -86,7 +86,7 @@ const Login = function(){
                             className={styles.input}
                         />
                     </FormGroup>
-                    <FormGroup for="password" className={styles.label}>
+                    <FormGroup htmlFor="password" className={styles.label}>
                         <Label>
                             SENHA
                         </Label>
