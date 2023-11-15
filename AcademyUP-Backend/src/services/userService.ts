@@ -36,6 +36,7 @@ export const userService = {
                 ['last_name', 'lastName'],
                 'phone',
                 'birth',
+                'createdAt',
                 'email',
                 'password'
             ],

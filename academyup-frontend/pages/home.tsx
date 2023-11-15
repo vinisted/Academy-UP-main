@@ -8,7 +8,7 @@ import Footer from "../src/components/common/footer";
 
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-//import PageSpinner from "../src/components/common/spinner";
+import PageSpinner from "@/src/components/common/spinner";
 
 const HomeAuth = function (){
     const router = useRouter();
@@ -22,9 +22,9 @@ const HomeAuth = function (){
         }
     },[]);
 
-    // if(loading){
-    //     return <PageSpinner/>;
-    // }
+    if(loading){
+        return <PageSpinner/>;
+    }
 
     return(
         <>

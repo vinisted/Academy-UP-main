@@ -19,111 +19,116 @@ export type CourseType = {
 
 const courseService = {
     getNewestCourses: async () => {
-        const res = await api.get("/courses/newest").catch((error)=>{
+        const res = await api.get("/courses/newest").catch((error) => {
             return error.response
         });
 
         return res;
     },
-    getFeaturedCourses: async()=>{
+    getFeaturedCourses: async () => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.get("/courses/featured",{
-            headers:{
+        const res = await api.get("/courses/featured", {
+            headers: {
                 Authorization: `Bearer ${token}`,
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 
         return res;
     },
-    addToFav: async (courseId: number | string) =>{
+    addToFav: async (courseId: number | string) => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.post("/favorites",{courseId},{
-            headers:{
+        const res = await api.post("/favorites", { courseId }, {
+            headers: {
                 Authorization: `Bearer ${token}`,
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 
         return res;
     },
-    removeFav: async (courseId: number | string) =>{
+    removeFav: async (courseId: number | string) => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.delete(`/favorites/${courseId}`,{
-            headers:{
+        const res = await api.delete(`/favorites/${courseId}`, {
+            headers: {
                 Authorization: `Bearer ${token}`,
             },
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 
         return res;
     },
-    getFavCourses: async()=>{
+    getFavCourses: async () => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.get("/favorites",{
-            headers:{
+        const res = await api.get("/favorites", {
+            headers: {
                 Authorization: `Bearer ${token}`,
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 
         return res;
     },
-    like: async(courseId: number | string)=>{
+    like: async (courseId: number | string) => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.post("/likes",{ courseId },{
-            headers:{
+        const res = await api.post("/likes", { courseId }, {
+            headers: {
                 Authorization: `Bearer ${token}`,
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 
         return res;
     },
-    removeLike: async(courseId: number | string)=>{
+    removeLike: async (courseId: number | string) => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.delete(`/likes/${courseId}`,{
-            headers:{
+        const res = await api.delete(`/likes/${courseId}`, {
+            headers: {
                 Authorization: `Bearer ${token}`,
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 
         return res;
     },
-    getSearch: async( name: string )=>{
+    getSearch: async (name: string) => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.get(`/courses/search?name=${name}`,{
-            headers:{
-                Authorization: `Bearer ${token}`,
-            }
-        }).catch((error)=>{
-            return error.response;
-        });
+        const res = await api
+            .get(`/courses/search?name=${name}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            })
+            .catch((error) => {
+                console.log(error.response.data.messsage);
 
+                return error.response;
+            });
+
+            console.log(res);
         return res;
     },
-    getEpisodes: async( id : number | string )=>{
+    getEpisodes: async (id: number | string) => {
         const token = sessionStorage.getItem("academyup-token");
 
-        const res = await api.get(`/courses/${id}`,{
-            headers:{
+        const res = await api.get(`/courses/${id}`, {
+            headers: {
                 Authorization: `Bearer ${token}`,
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             return error.response;
         });
 

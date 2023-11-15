@@ -71,7 +71,7 @@ const Register = function (){
                         <strong>Faça a sua conta!</strong>
                     </p>
                     <FormGroup>
-                        <Label for="firstName" className={styles.label} >
+                        <Label htmlFor="firstName" className={styles.label} >
                             NOME
                         </Label>
                         <Input 
@@ -85,7 +85,7 @@ const Register = function (){
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="lastName" className={styles.label} >
+                        <Label htmlFor="lastName" className={styles.label} >
                             SOBRENOME
                         </Label>
                         <Input 
@@ -99,7 +99,7 @@ const Register = function (){
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="phone" className={styles.label} >
+                        <Label htmlFor="phone" className={styles.label} >
                             TELEFONE
                         </Label>
                         <Input 
@@ -113,7 +113,7 @@ const Register = function (){
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="email" className={styles.label} >
+                        <Label htmlFor="email" className={styles.label} >
                             E-MAIL
                         </Label>
                         <Input 
@@ -126,7 +126,7 @@ const Register = function (){
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="birth" className={styles.label} >
+                        <Label htmlFor="birth" className={styles.label} >
                             DATA DE NASCIMENTO
                         </Label>
                         <Input 
@@ -140,7 +140,7 @@ const Register = function (){
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="password" className={styles.label} >
+                        <Label htmlFor="password" className={styles.label} >
                             SENHA
                         </Label>
                         <Input 
@@ -155,7 +155,7 @@ const Register = function (){
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="confirmPassword" className={styles.label} >
+                        <Label htmlFor="confirmPassword" className={styles.label} >
                             CONFIRME SUA SENHA
                         </Label>
                         <Input 
